@@ -1,1 +1,6626 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================
+         BASIC META
+    ========================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="SY Digital Studio - Premium Frontend Development, Web Design, Responsive Websites and Digital Solutions.">
+
+    <meta name="keywords"
+        content="SY Digital Studio, frontend developer, web developer, web designer, HTML, CSS, JavaScript, responsive websites, portfolio">
+
+    <meta name="author"
+        content="SY Digital Studio">
+
+    <meta name="robots"
+        content="index, follow">
+
+
+    <!-- =========================
+         OPEN GRAPH
+    ========================== -->
+
+    <meta property="og:title"
+        content="SY Digital Studio | Web Developer & Digital Studio">
+
+    <meta property="og:description"
+        content="Premium websites, frontend development and responsive digital experiences.">
+
+    <meta property="og:type"
+        content="website">
+
+
+    <!-- =========================
+         TITLE
+    ========================== -->
+
+    <title>SY Digital Studio | Premium Web Developer</title>
+
+
+    <!-- =========================
+         FONTS
+    ========================== -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         ICONS
+    ========================== -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <style>
+        
+/* =========================================================
+   SY DIGITAL STUDIO
+   PREMIUM BLACK + GOLD + BOSKI THEME
+========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --black: #080807;
+    --black-soft: #10100e;
+    --black-card: #141310;
+    --black-light: #1b1915;
+
+    --gold: #c9a24d;
+    --gold-light: #e6c875;
+    --gold-dark: #92732f;
+
+    --boski: #d6c09a;
+    --boski-light: #eee2c9;
+
+    --white: #ffffff;
+    --text: #f4f0e8;
+    --text-soft: #b8b1a4;
+    --text-dark: #81796b;
+
+    --border: rgba(201, 162, 77, 0.22);
+    --border-light: rgba(255, 255, 255, 0.08);
+
+    --gradient-gold:
+        linear-gradient(
+            135deg,
+            #8f6d2b,
+            #e5c46d,
+            #b58c3a
+        );
+
+    --gradient-dark:
+        linear-gradient(
+            145deg,
+            #171511,
+            #0c0b09
+        );
+
+    --shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+
+    --shadow-gold:
+        0 15px 45px rgba(201, 162, 77, 0.12);
+
+    --radius: 18px;
+    --radius-small: 10px;
+
+    --container: 1240px;
+
+    --transition:
+        all 0.35s ease;
+
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--black);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+body.loading {
+    overflow: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+::selection {
+    background: var(--gold);
+    color: var(--black);
+}
+
+
+/* =========================================================
+   03. GLOBAL CONTAINER
+========================================================= */
+
+.container {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   04. GLOBAL SECTION
+========================================================= */
+
+.section {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+
+.section::before {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 162, 77, 0.035);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+.section-heading {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin-bottom: 60px;
+}
+
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        38px,
+        5vw,
+        66px
+    );
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    color: var(--white);
+
+    margin-bottom: 20px;
+}
+
+
+.section-heading h2 span {
+    color: var(--gold-light);
+}
+
+
+.section-heading p {
+    max-width: 650px;
+
+    color: var(--text-soft);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   05. GOLD BUTTON
+========================================================= */
+
+.gold-btn {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 52px;
+
+    padding: 0 25px;
+
+    background: var(--gradient-gold);
+
+    color: #090806;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+
+.gold-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent
+        );
+
+    transition: 0.6s;
+}
+
+
+.gold-btn:hover::before {
+    left: 100%;
+}
+
+
+.gold-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(201, 162, 77, 0.25);
+}
+
+
+.outline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 52px;
+
+    padding: 0 25px;
+
+    color: var(--boski-light);
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+
+.outline-btn:hover {
+    background: rgba(201, 162, 77, 0.08);
+
+    border-color: var(--gold);
+
+    color: var(--gold-light);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   06. LOADER
+========================================================= */
+
+.loader {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #211c13 0%,
+            #0b0a08 42%,
+            #050504 100%
+        );
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+.loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.loader-content {
+    width: min(90%, 430px);
+
+    text-align: center;
+}
+
+
+.loader-logo,
+.access-logo {
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    border: 1px solid var(--gold);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(201, 162, 77, 0.15),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    color: var(--gold-light);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    box-shadow:
+        0 0 45px rgba(201, 162, 77, 0.12);
+
+    animation: logoPulse 2s infinite;
+}
+
+
+.loader h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    color: var(--white);
+
+    margin-bottom: 8px;
+}
+
+
+.loader p {
+    color: var(--text-soft);
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.loader-line {
+    position: relative;
+
+    width: 100%;
+    height: 2px;
+
+    margin: 35px auto 15px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    overflow: hidden;
+}
+
+
+.loader-line span {
+    display: block;
+
+    width: 0;
+    height: 100%;
+
+    background: var(--gradient-gold);
+}
+
+
+.loader-percent {
+    color: var(--gold-light);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+@keyframes logoPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow:
+            0 0 30px rgba(201, 162, 77, 0.08);
+    }
+
+    50% {
+        transform: scale(1.04);
+        box-shadow:
+            0 0 55px rgba(201, 162, 77, 0.18);
+    }
+
+}
+
+
+/* =========================================================
+   07. ACCESS SCREEN
+========================================================= */
+
+.access-screen {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(201, 162, 77, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(214, 192, 154, 0.06),
+            transparent 30%
+        ),
+        var(--black);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+}
+
+
+.access-screen.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.access-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.access-container {
+    position: relative;
+
+    width: min(100%, 490px);
+
+    padding: 55px 48px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(18px);
+}
+
+
+.access-container::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 1px;
+
+    border-radius: 19px;
+
+    border: 1px solid rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+
+.access-logo {
+    width: 65px;
+    height: 65px;
+
+    font-size: 23px;
+
+    margin-bottom: 25px;
+}
+
+
+.small-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.access-container h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(32px, 5vw, 46px);
+
+    color: var(--white);
+
+    margin-bottom: 13px;
+}
+
+
+.access-container > p {
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+.access-container form {
+    text-align: left;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--boski);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    color: var(--white);
+
+    background: rgba(0, 0, 0, 0.3);
+
+    border: 1px solid var(--border-light);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    transition: var(--transition);
+}
+
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #716b61;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+
+    background: rgba(201, 162, 77, 0.04);
+
+    box-shadow:
+        0 0 0 3px rgba(201, 162, 77, 0.06);
+}
+
+
+.access-container .gold-btn {
+    width: 100%;
+}
+
+
+.privacy-note {
+    margin-top: 18px !important;
+
+    font-size: 11px !important;
+
+    color: #716b61 !important;
+}
+
+
+.privacy-note i {
+    color: var(--gold);
+
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   08. MAIN WEBSITE
+========================================================= */
+
+.main-website {
+    display: none;
+}
+
+
+.main-website.show {
+    display: block;
+
+    animation: websiteReveal 0.8s ease;
+}
+
+
+@keyframes websiteReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   09. HEADER
+========================================================= */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(8, 8, 7, 0.82);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(18px);
+}
+
+
+.nav-container {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold-light);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+.logo-text {
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+}
+
+
+.navbar {
+    margin-left: auto;
+}
+
+
+.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.nav-link {
+    position: relative;
+
+    color: #aaa398;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: var(--transition);
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gold-light);
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 11px 17px;
+
+    border: 1px solid var(--border);
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+
+    transition: var(--transition);
+}
+
+
+.nav-btn:hover {
+    background: rgba(201, 162, 77, 0.08);
+
+    border-color: var(--gold);
+
+    transform: translateY(-2px);
+}
+
+
+.menu-toggle {
+    display: none;
+
+    width: 43px;
+    height: 43px;
+
+    color: var(--gold-light);
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   10. HERO
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        150px 0
+        90px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 30%,
+            rgba(201, 162, 77, 0.11),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(214, 192, 154, 0.05),
+            transparent 30%
+        ),
+        #080807;
+}
+
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -260px;
+    top: 100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(201, 162, 77, 0.08);
+
+    box-shadow:
+        0 0 0 80px rgba(201, 162, 77, 0.015),
+        0 0 0 160px rgba(201, 162, 77, 0.01);
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 7, 0.95),
+            transparent 75%
+        );
+
+    pointer-events: none;
+}
+
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(300px, 0.55fr);
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.hero-content {
+    max-width: 750px;
+}
+
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 22px;
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.gold-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    box-shadow:
+        0 0 15px rgba(201, 162, 77, 0.7);
+}
+
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        50px,
+        7vw,
+        94px
+    );
+
+    line-height: 0.98;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+    color: var(--white);
+
+    margin-bottom: 30px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: transparent;
+
+    background:
+        linear-gradient(
+            100deg,
+            #a57e32,
+            #f1d47e,
+            #bd9140
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+
+.hero-description {
+    max-width: 620px;
+
+    color: var(--text-soft);
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-bottom: 55px;
+}
+
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+
+    gap: 45px;
+}
+
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero-stat strong {
+    color: var(--gold-light);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    line-height: 1.1;
+}
+
+
+.hero-stat span {
+    color: #80796e;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+}
+
+
+.hero-card {
+    position: relative;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(20px);
+
+    transform: rotate(2deg);
+
+    transition: var(--transition);
+}
+
+
+.hero-card:hover {
+    transform:
+        rotate(0)
+        translateY(-8px);
+
+    box-shadow:
+        var(--shadow),
+        var(--shadow-gold);
+}
+
+
+.hero-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 25px;
+
+    border-bottom:
+        1px solid var(--border-light);
+}
+
+
+.hero-card-top span {
+    color: var(--gold-light);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+}
+
+
+.hero-card-top i {
+    color: var(--gold);
+
+    font-size: 20px;
+}
+
+
+.hero-card-content {
+    padding: 45px 0;
+}
+
+
+.card-label {
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-card h3 {
+    margin: 13px 0;
+
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+}
+
+
+.hero-card-content p {
+    color: var(--text-soft);
+
+    font-size: 13px;
+}
+
+
+.hero-card-footer {
+    display: flex;
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+
+.hero-card-footer span {
+    padding: 6px 10px;
+
+    color: var(--gold-light);
+
+    background: rgba(201, 162, 77, 0.06);
+
+    border: 1px solid var(--border);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+/* =====================================================
+   FOUNDER SECTION
+===================================================== */
+
+.founder-section {
+
+    position: relative;
+
+    padding: 120px 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(194, 151, 65, 0.10),
+            transparent 35%
+        ),
+        #0b0b0a;
+
+    color: #fff;
+
+}
+
+
+.founder-container {
+
+    width: min(1180px, 92%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.founder-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 22px;
+
+    border: 1px solid rgba(212, 168, 79, .55);
+
+    color: #d9b45d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+}
+
+
+.founder-label i {
+
+    font-size: 14px;
+
+}
+
+
+.founder-content h2 {
+
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 5vw, 72px);
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    color: #f5f1e9;
+
+}
+
+
+.founder-content h2 span {
+
+    display: block;
+
+    color: #d8ae57;
+
+}
+
+
+.founder-line {
+
+    width: 105px;
+
+    height: 2px;
+
+    margin: 28px 0;
+
+    background: linear-gradient(
+        90deg,
+        #d8ae57,
+        transparent
+    );
+
+}
+
+
+.founder-intro {
+
+    max-width: 620px;
+
+    color: #aaa69e;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 32px;
+
+}
+
+
+.founder-intro strong {
+
+    color: #e0b960;
+
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.founder-features {
+
+    display: grid;
+
+    gap: 20px;
+
+}
+
+
+.founder-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.feature-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(215, 172, 82, .55);
+
+    border-radius: 50%;
+
+    color: #dcb35e;
+
+    background: rgba(216, 174, 87, .04);
+
+}
+
+
+.founder-feature h3 {
+
+    margin: 0 0 5px;
+
+    color: #e0b960;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+
+.founder-feature p {
+
+    margin: 0;
+
+    color: #8f8b83;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   SIGNATURE
+===================================================== */
+
+.founder-signature {
+
+    margin-top: 32px;
+
+    color: #dcb35e;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 29px;
+
+    font-style: italic;
+
+}
+
+
+/* =====================================================
+   SOCIALS
+===================================================== */
+
+.founder-socials {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 22px;
+
+}
+
+
+.founder-socials a {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(215, 172, 82, .45);
+
+    border-radius: 50%;
+
+    color: #dcb35e;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+
+}
+
+
+.founder-socials a:hover {
+
+    background: #dcb35e;
+
+    color: #0b0b0a;
+
+    transform: translateY(-4px);
+
+}
+
+
+/* =====================================================
+   FOUNDER CARD
+===================================================== */
+
+.founder-card {
+
+    position: relative;
+
+    min-height: 610px;
+
+    padding: 1px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #e1b95d,
+        #5d4319,
+        #e1b95d
+    );
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.55);
+
+}
+
+
+.founder-card-inner {
+
+    position: relative;
+
+    height: 100%;
+
+    min-height: 608px;
+
+    overflow: hidden;
+
+    border-radius: 21px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(214, 168, 75, .16),
+            transparent 42%
+        ),
+        #11110f;
+
+}
+
+
+/* =====================================================
+   GOLD CORNERS
+===================================================== */
+
+.corner {
+
+    position: absolute;
+
+    width: 75px;
+
+    height: 75px;
+
+    border-color: #dcb35e;
+
+    z-index: 3;
+
+}
+
+
+.corner-tl {
+
+    top: 25px;
+    left: 25px;
+
+    border-top: 1px solid;
+    border-left: 1px solid;
+
+}
+
+
+.corner-tr {
+
+    top: 25px;
+    right: 25px;
+
+    border-top: 1px solid;
+    border-right: 1px solid;
+
+}
+
+
+.corner-bl {
+
+    bottom: 25px;
+    left: 25px;
+
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+
+}
+
+
+.corner-br {
+
+    bottom: 25px;
+    right: 25px;
+
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.founder-card-logo {
+
+    position: absolute;
+
+    top: 55px;
+
+    left: 55px;
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #c99f4c;
+
+    color: #e1ba62;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 26px;
+
+    z-index: 4;
+
+}
+
+
+/* =====================================================
+   FOUNDER IMAGE
+===================================================== */
+
+.founder-image-wrapper {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 105px;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    height: 82%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+}
+
+
+.founder-image-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 80%;
+
+    height: 80%;
+
+    border-radius: 50%;
+
+    background: rgba(212, 164, 68, .16);
+
+    filter: blur(70px);
+
+}
+
+
+.founder-image-wrapper img {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    border-radius: 15px;
+
+    filter: saturate(.9) contrast(1.05);
+
+}
+
+
+/* =====================================================
+   CARD INFO
+===================================================== */
+
+.founder-card-info {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 25px;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border: 1px solid rgba(218, 173, 80, .45);
+
+    border-radius: 15px;
+
+    background: rgba(10,10,9,.92);
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.founder-card-info h3 {
+
+    margin: 0 0 7px;
+
+    color: #e5bd68;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.founder-card-info p {
+
+    margin: 0;
+
+    color: #99958d;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.founder-card-mark {
+
+    color: #dcb35e;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.founder-stats {
+
+    width: min(1180px, 92%);
+
+    margin: 80px auto 0;
+
+    padding: 25px 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border: 1px solid rgba(210, 165, 73, .35);
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.015);
+
+}
+
+
+.founder-stat {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 10px 20px;
+
+    border-right: 1px solid rgba(210,165,73,.25);
+
+}
+
+
+.founder-stat:last-child {
+
+    border-right: none;
+
+}
+
+
+.founder-stat > i {
+
+    font-size: 25px;
+
+    color: #dfb75e;
+
+}
+
+
+.founder-stat strong {
+
+    display: block;
+
+    color: #f1eee8;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+}
+
+
+.founder-stat span {
+
+    display: block;
+
+    margin-top: 6px;
+
+    color: #85817a;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .founder-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+    .founder-content {
+
+        max-width: 750px;
+
+        margin: auto;
+
+        text-align: center;
+
+    }
+
+    .founder-line {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .founder-intro {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .founder-features {
+
+        text-align: left;
+
+        max-width: 600px;
+
+        margin: auto;
+
+    }
+
+    .founder-socials {
+
+        justify-content: center;
+
+    }
+
+    .founder-card {
+
+        width: min(620px, 100%);
+
+        margin: auto;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .founder-section {
+
+        padding: 80px 0;
+
+    }
+
+    .founder-container {
+
+        width: 90%;
+
+        gap: 45px;
+
+    }
+
+    .founder-content h2 {
+
+        font-size: 42px;
+
+    }
+
+    .founder-label {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+        padding: 10px 15px;
+
+    }
+
+    .founder-intro {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+    }
+
+    .founder-feature {
+
+        align-items: flex-start;
+
+    }
+
+    .founder-feature h3 {
+
+        font-size: 14px;
+
+    }
+
+    .founder-feature p {
+
+        font-size: 12px;
+
+    }
+
+    .founder-card {
+
+        min-height: 500px;
+
+    }
+
+    .founder-card-inner {
+
+        min-height: 498px;
+
+    }
+
+    .founder-card-logo {
+
+        top: 35px;
+
+        left: 35px;
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 21px;
+
+    }
+
+    .founder-image-wrapper {
+
+        width: 100%;
+
+        height: 78%;
+
+        bottom: 95px;
+
+    }
+
+    .founder-card-info {
+
+        left: 15px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+        padding: 16px;
+
+    }
+
+    .founder-card-info h3 {
+
+        font-size: 14px;
+
+    }
+
+    .founder-card-info p {
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .founder-card-mark {
+
+        font-size: 22px;
+
+    }
+
+    .corner {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+    .corner-tl,
+    .corner-tr {
+
+        top: 18px;
+
+    }
+
+    .corner-bl,
+    .corner-br {
+
+        bottom: 18px;
+
+    }
+
+    .corner-tl,
+    .corner-bl {
+
+        left: 18px;
+
+    }
+
+    .corner-tr,
+    .corner-br {
+
+        right: 18px;
+
+    }
+
+    .founder-stats {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 15px;
+
+        gap: 10px;
+
+    }
+
+    .founder-stat {
+
+        justify-content: flex-start;
+
+        padding: 15px 10px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(210,165,73,.2);
+
+    }
+
+    .founder-stat:nth-child(3),
+    .founder-stat:nth-child(4) {
+
+        border-bottom: none;
+
+    }
+
+    .founder-stat strong {
+
+        font-size: 22px;
+
+    }
+
+    .founder-stat span {
+
+        font-size: 8px;
+
+    }
+
+    .founder-stat > i {
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .founder-content h2 {
+
+        font-size: 35px;
+
+    }
+
+    .founder-card {
+
+        min-height: 450px;
+
+    }
+
+    .founder-card-inner {
+
+        min-height: 448px;
+
+    }
+
+    .founder-image-wrapper {
+
+        height: 76%;
+
+    }
+
+    .founder-card-info h3 {
+
+        font-size: 12px;
+
+    }
+
+    .founder-card-info p {
+
+        font-size: 7px;
+
+    }
+
+}
+
+/* =========================================================
+   11. ABOUT
+========================================================= */
+
+.about {
+    background: #0b0b09;
+}
+
+
+.about::before {
+    top: 0;
+    right: -150px;
+}
+
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr;
+
+    gap: 18px;
+}
+
+
+.about-card {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.012)
+        );
+
+    border: 1px solid var(--border-light);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+
+    overflow: hidden;
+}
+
+
+.about-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--border);
+
+    box-shadow: var(--shadow-gold);
+}
+
+
+.about-intro {
+    grid-row: span 2;
+
+    min-height: 520px;
+}
+
+
+.about-number {
+    display: block;
+
+    color: var(--gold-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 60px;
+
+    line-height: 1;
+
+    margin-bottom: 70px;
+}
+
+
+.about-card h3 {
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 14px;
+}
+
+
+.about-card p {
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+    margin-bottom: 14px;
+}
+
+
+.about-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 45px;
+
+    color: var(--gold-light);
+
+    border: 1px solid var(--border);
+
+    background: rgba(201, 162, 77, 0.05);
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   12. SKILLS
+========================================================= */
+
+.skills {
+    background: var(--black);
+}
+
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.skill-card {
+    position: relative;
+
+    padding: 35px;
+
+    min-height: 280px;
+
+    background: var(--gradient-dark);
+
+    border: 1px solid var(--border-light);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+
+.skill-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: -70px;
+    bottom: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 162, 77, 0.08);
+
+    transition: var(--transition);
+}
+
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--border);
+
+    box-shadow: var(--shadow-gold);
+}
+
+
+.skill-card:hover::after {
+    transform: scale(1.5);
+}
+
+
+.skill-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    color: var(--gold-light);
+
+    border: 1px solid var(--border);
+
+    font-size: 22px;
+}
+
+
+.skill-card h3 {
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+
+.skill-card p {
+    color: var(--text-soft);
+
+    font-size: 13px;
+
+    max-width: 280px;
+}
+
+
+.skill-tag {
+    position: absolute;
+
+    bottom: 25px;
+    left: 35px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   13. PROJECTS
+========================================================= */
+.project-preview {
+    overflow: hidden;
+    position: relative;
+}
+
+.project-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.projects {
+    background: #0b0b09;
+}
+
+
+.projects-heading {
+    max-width: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 50px;
+}
+
+
+.projects-heading > p {
+    max-width: 420px;
+
+    margin-bottom: 7px;
+}
+
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 35px;
+}
+
+
+.filter-btn {
+    padding: 10px 17px;
+
+    color: var(--text-soft);
+
+    background: transparent;
+
+    border: 1px solid var(--border-light);
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: var(--transition);
+}
+
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: var(--black);
+
+    background: var(--gold-light);
+
+    border-color: var(--gold-light);
+}
+
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.project-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181611,
+            #0f0e0b
+        );
+
+    border: 1px solid var(--border-light);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--border);
+
+    box-shadow: var(--shadow-gold);
+}
+
+
+.project-card.hidden {
+    display: none;
+}
+
+
+.project-number {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.project-preview {
+    position: relative;
+
+    height: 240px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--border-light);
+
+    background:
+        linear-gradient(
+            135deg,
+            #242018,
+            #0c0b09
+        );
+}
+
+
+.project-preview::before {
+    content: "";
+
+    position: absolute;
+
+    width: 75%;
+    height: 75%;
+
+    border: 1px solid rgba(201, 162, 77, 0.15);
+
+    transform: rotate(-8deg);
+
+    transition: var(--transition);
+}
+
+
+.project-card:hover
+.project-preview::before {
+    transform:
+        rotate(0)
+        scale(1.1);
+}
+
+
+.project-preview span {
+    position: relative;
+    z-index: 1;
+
+    padding: 9px 13px;
+
+    color: var(--gold-light);
+
+    background: rgba(0, 0, 0, 0.45);
+
+    border: 1px solid var(--border);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.project-preview-one {
+    background:
+        radial-gradient(
+            circle at 30% 40%,
+            rgba(201, 162, 77, 0.16),
+            transparent 35%
+        ),
+        #11100d;
+}
+
+
+.project-preview-two {
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(214, 192, 154, 0.12),
+            transparent 35%
+        ),
+        #11100d;
+}
+
+
+.project-preview-three {
+    background:
+        linear-gradient(
+            135deg,
+            #191610,
+            #0b0b09
+        );
+}
+
+
+.project-preview-four {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201, 162, 77, 0.12),
+            transparent 40%
+        ),
+        #11100d;
+}
+
+
+.project-preview-five {
+    background:
+        linear-gradient(
+            145deg,
+            #1d1911,
+            #0a0907
+        );
+}
+
+
+.project-preview-six {
+    background:
+        radial-gradient(
+            circle at 75% 70%,
+            rgba(214, 192, 154, 0.09),
+            transparent 35%
+        ),
+        #0d0c0a;
+}
+
+
+.project-content {
+    padding: 28px;
+}
+
+
+.project-category {
+    color: var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.project-content h3 {
+    margin: 10px 0 8px;
+
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+}
+
+
+.project-content > p {
+    color: var(--text-soft);
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 25px;
+}
+
+
+.project-tech span {
+    padding: 5px 9px;
+
+    color: var(--boski);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid var(--border-light);
+
+    font-size: 9px;
+}
+
+
+.project-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--border-light);
+}
+
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--gold-light);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+
+    transition: var(--transition);
+}
+
+
+.project-links a:hover {
+    color: var(--white);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   14. SCREENSHOTS
+========================================================= */
+
+.screenshots {
+    background: var(--black);
+}
+
+
+.screenshots-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.screenshot-card {
+    background:
+        linear-gradient(
+            145deg,
+            #171510,
+            #0c0b09
+        );
+
+    border: 1px solid var(--border-light);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+
+.screenshot-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--border);
+
+    box-shadow: var(--shadow-gold);
+}
+
+
+.screenshot-image {
+    position: relative;
+
+    height: 260px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #221d14,
+            #0d0c0a
+        );
+}
+
+
+.screenshot-image::after {
+    content: "SCREENSHOT";
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 5px 9px;
+
+    color: var(--gold-light);
+
+    background: rgba(0, 0, 0, 0.7);
+
+    border: 1px solid var(--border);
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.screenshot-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+.screenshot-card:hover
+.screenshot-image img {
+    transform: scale(1.04);
+}
+
+
+.screenshot-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 20px;
+}
+
+
+.screenshot-info span {
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+
+.screenshot-info h3 {
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   15. LIVE WEBSITES
+========================================================= */
+
+.live-websites {
+    background: #0b0b09;
+}
+
+
+.live-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.live-card {
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.01)
+        );
+
+    border: 1px solid var(--border-light);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+
+.live-card:hover {
+    border-color: var(--border);
+
+    transform: translateY(-5px);
+}
+
+
+.live-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gold-light);
+
+    border: 1px solid var(--border);
+
+    font-size: 18px;
+}
+
+
+.live-content > span {
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.live-content h3 {
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    margin: 4px 0;
+}
+
+
+.live-content p {
+    color: var(--text-soft);
+
+    font-size: 12px;
+}
+
+
+.live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--gold-light);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+
+.live-link:hover {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   16. RESPONSIVE DESIGN SECTION
+========================================================= */
+
+.responsive {
+    background: var(--black);
+}
+
+
+.responsive-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.responsive-card {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171510,
+            #0c0b09
+        );
+
+    border: 1px solid var(--border-light);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+
+.responsive-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--border);
+
+    box-shadow: var(--shadow-gold);
+}
+
+
+.device-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    color: var(--gold-light);
+
+    border: 1px solid var(--border);
+
+    font-size: 21px;
+}
+
+
+.responsive-card h3 {
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+.responsive-card p {
+    color: var(--text-soft);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   17. CONTACT
+========================================================= */
+
+.contact {
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(201, 162, 77, 0.07),
+            transparent 30%
+        ),
+        #0b0b09;
+}
+
+
+.contact-wrapper {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr
+        1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+.contact-info h2 {
+    max-width: 600px;
+
+    margin: 15px 0 20px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(
+        42px,
+        5vw,
+        68px
+    );
+
+    line-height: 1.05;
+}
+
+
+.contact-info h2 span {
+    display: block;
+
+    color: var(--gold-light);
+}
+
+
+.contact-info > p {
+    max-width: 480px;
+
+    color: var(--text-soft);
+
+    font-size: 15px;
+
+    margin-bottom: 45px;
+}
+
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+
+    gap: 23px;
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: var(--gold-light);
+
+    border: 1px solid var(--border);
+}
+
+
+.contact-item span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+
+.contact-item a,
+.contact-item p {
+    color: var(--boski-light);
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+
+.contact-item a:hover {
+    color: var(--gold-light);
+}
+
+
+.social-links {
+    display: flex;
+    gap: 9px;
+
+    margin-top: 35px;
+}
+
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-soft);
+
+    border: 1px solid var(--border-light);
+
+    transition: var(--transition);
+}
+
+
+.social-links a:hover {
+    color: var(--black);
+
+    background: var(--gold-light);
+
+    border-color: var(--gold-light);
+
+    transform: translateY(-3px);
+}
+
+
+.contact-form-box {
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.012)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(15px);
+}
+
+
+.input-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 18px;
+}
+
+
+.contact-form-box .gold-btn {
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   18. FOOTER
+========================================================= */
+
+.footer {
+    padding: 70px 0 25px;
+
+    background: #060605;
+
+    border-top: 1px solid var(--border-light);
+}
+
+
+.footer-top {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 50px;
+
+    padding-bottom: 55px;
+}
+
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+}
+
+
+.footer-logo .logo-mark {
+    width: 43px;
+    height: 43px;
+}
+
+
+.footer-brand p {
+    max-width: 350px;
+
+    color: #777166;
+
+    font-size: 12px;
+
+    margin-top: 20px;
+}
+
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.footer-column h3 {
+    margin-bottom: 12px;
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+
+.footer-column a {
+    color: #777166;
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+
+.footer-column a:hover {
+    color: var(--gold-light);
+
+    transform: translateX(3px);
+}
+
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border-light);
+}
+
+
+.footer-bottom p {
+    color: #5f5a52;
+
+    font-size: 10px;
+}
+
+
+.footer-bottom a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   19. SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #070706;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #514328;
+
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-dark);
+}
+
+
+/* =========================================================
+   20. TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .container {
+        width: min(
+            calc(100% - 32px),
+            960px
+        );
+    }
+
+
+    .section {
+        padding: 95px 0;
+    }
+
+
+    .nav-list {
+        gap: 16px;
+    }
+
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+
+    .hero-container {
+        gap: 45px;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(
+            48px,
+            7vw,
+            72px
+        );
+    }
+
+
+    .about-grid {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+
+    .about-intro {
+        grid-row: auto;
+
+        grid-column: span 2;
+
+        min-height: auto;
+    }
+
+
+    .about-number {
+        margin-bottom: 35px;
+    }
+
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .screenshots-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .responsive-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .footer-top {
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+    }
+
+}
+
+
+/* =========================================================
+   21. TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        min-height: 74px;
+    }
+
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: auto;
+    }
+
+
+    .navbar {
+        position: absolute;
+
+        top: calc(100% + 1px);
+        left: 0;
+
+        width: 100%;
+
+        padding: 15px 20px 22px;
+
+        background:
+            rgba(8, 8, 7, 0.97);
+
+        border-bottom: 1px solid var(--border);
+
+        backdrop-filter: blur(20px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition: var(--transition);
+    }
+
+
+    .navbar.open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+
+    .nav-list {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+
+    .nav-list li {
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.04);
+    }
+
+
+    .nav-link {
+        display: block;
+
+        padding: 13px 5px;
+
+        font-size: 12px;
+    }
+
+
+    .nav-link::after {
+        display: none;
+    }
+
+
+    .nav-btn {
+        display: none;
+    }
+
+
+    .hero {
+        padding-top: 130px;
+    }
+
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+
+    .hero-card {
+        width: min(
+            100%,
+            480px
+        );
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .projects-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .contact-info {
+        max-width: 700px;
+    }
+
+
+    .footer-top {
+        grid-template-columns:
+            1.5fr
+            1fr;
+    }
+
+}
+
+
+/* =========================================================
+   22. MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: min(
+            calc(100% - 28px),
+            100%
+        );
+    }
+
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+
+    /* ACCESS */
+
+    .access-screen {
+        padding: 18px;
+    }
+
+
+    .access-container {
+        padding: 38px 24px;
+    }
+
+
+    .access-container h1 {
+        font-size: 34px;
+    }
+
+
+    /* HEADER */
+
+    .logo-text {
+        font-size: 15px;
+    }
+
+
+    .logo-mark {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            130px 0
+            75px;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(
+            44px,
+            13vw,
+            60px
+        );
+
+        letter-spacing: -1px;
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-bottom: 40px;
+    }
+
+
+    .gold-btn,
+    .outline-btn {
+        width: 100%;
+    }
+
+
+    .hero-stats {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 12px;
+    }
+
+
+    .hero-stat strong {
+        font-size: 22px;
+    }
+
+
+    .hero-stat span {
+        font-size: 8px;
+    }
+
+
+    .hero-card {
+        transform: none;
+
+        padding: 24px;
+    }
+
+
+    .hero-card:hover {
+        transform: translateY(-5px);
+    }
+
+
+    .hero-card-content {
+        padding: 35px 0;
+    }
+
+
+    .hero-card h3 {
+        font-size: 26px;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .about-intro {
+        grid-column: auto;
+
+        min-height: auto;
+    }
+
+
+    .about-number {
+        font-size: 48px;
+
+        margin-bottom: 40px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-grid,
+    .projects-grid,
+    .screenshots-grid,
+    .live-grid,
+    .responsive-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .skill-card {
+        min-height: 250px;
+
+        padding: 28px;
+    }
+
+
+    /* PROJECTS */
+
+    .project-preview {
+        height: 220px;
+    }
+
+
+    .project-content {
+        padding: 24px;
+    }
+
+
+    .project-links {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    /* SCREENSHOTS */
+
+    .screenshot-image {
+        height: 230px;
+    }
+
+
+    /* LIVE */
+
+    .live-card {
+        grid-template-columns: auto 1fr;
+
+        gap: 15px;
+
+        padding: 22px;
+    }
+
+
+    .live-link {
+        grid-column: 1 / -1;
+
+        padding-top: 14px;
+
+        border-top: 1px solid var(--border-light);
+
+        width: 100%;
+    }
+
+
+    /* CONTACT */
+
+    .contact-info h2 {
+        font-size: 43px;
+    }
+
+
+    .contact-form-box {
+        padding: 25px 20px;
+    }
+
+
+    .input-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding-top: 55px;
+    }
+
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px 25px;
+    }
+
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   23. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .container {
+        width: min(
+            calc(100% - 22px),
+            100%
+        );
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .hero-stats {
+        gap: 7px;
+    }
+
+
+    .hero-stat strong {
+        font-size: 19px;
+    }
+
+
+    .hero-stat span {
+        font-size: 7px;
+
+        letter-spacing: 0.7px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+
+    .footer-column {
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   24. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         LOADING SCREEN
+    ====================================================== -->
+
+    <div class="loader" id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                SY
+            </div>
+
+            <h2>
+                SY Digital Studio
+            </h2>
+
+            <p>
+                Digital Experiences. Crafted With Precision.
+            </p>
+
+            <div class="loader-line">
+                <span></span>
+            </div>
+
+            <div class="loader-percent">
+                <span id="loaderPercent">0%</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ACCESS FORM
+    ====================================================== -->
+
+    <section class="access-screen" id="accessScreen">
+
+        <div class="access-container">
+
+            <div class="access-logo">
+                SY
+            </div>
+
+            <span class="small-label">
+                WELCOME TO
+            </span>
+
+            <h1>
+                SY Digital Studio
+            </h1>
+
+            <p>
+                Enter your details to explore my
+                digital portfolio and selected projects.
+            </p>
+
+
+            <form id="accessForm">
+
+                <div class="form-group">
+
+                    <label for="visitorName">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="visitorName"
+                        name="visitorName"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="visitorEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="visitorEmail"
+                        name="visitorEmail"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="gold-btn">
+
+                    Enter Studio
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+            <p class="privacy-note">
+                <i class="fa-solid fa-lock"></i>
+                Your information stays private.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN WEBSITE
+    ====================================================== -->
+
+    <div class="main-website" id="mainWebsite">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="header">
+
+            <div class="container nav-container">
+
+
+                <!-- LOGO -->
+
+                <a href="#home"
+                    class="logo"
+                    aria-label="SY Digital Studio Home">
+
+                    <span class="logo-mark">
+                        SY
+                    </span>
+
+                    <span class="logo-text">
+                        Digital Studio
+                    </span>
+
+                </a>
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <!-- NAVIGATION -->
+
+                <nav class="navbar"
+                    id="navbar">
+
+                    <ul class="nav-list">
+
+                        <li>
+                            <a href="#home"
+                                class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#about"
+                                class="nav-link">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#skills"
+                                class="nav-link">
+                                Skills
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#projects"
+                                class="nav-link">
+                                My Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#screenshots"
+                                class="nav-link">
+                                Screenshots
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#responsive"
+                                class="nav-link">
+                                Responsive
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact"
+                                class="nav-link">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+                <!-- HEADER BUTTON -->
+
+                <a href="#contact"
+                    class="nav-btn">
+
+                    Let's Talk
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             HERO / HOME
+        ================================================== -->
+
+        <main>
+
+
+            <section class="hero"
+                id="home">
+
+                <div class="hero-overlay"></div>
+
+                <div class="container hero-container">
+
+
+                    <div class="hero-content">
+
+                        <span class="hero-label">
+
+                            <span class="gold-dot"></span>
+
+                            FRONTEND DEVELOPER
+                            
+                        </span>
+
+
+                        <h1>
+
+                            Digital Experiences
+                            <span>
+                                Crafted With Precision.
+                            </span>
+
+                        </h1>
+
+
+                        <p class="hero-description">
+
+                            I design and develop premium,
+                            responsive and modern websites
+                            that combine clean code with
+                            powerful visual experiences.
+
+                        </p>
+
+
+                        <div class="hero-buttons">
+
+                            <a href="#projects"
+                                class="gold-btn">
+
+                                Explore My Work
+
+                                <i class="fa-solid fa-arrow-down"></i>
+
+                            </a>
+
+
+                            <a href="#contact"
+                                class="outline-btn">
+
+                                Start A Project
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- HERO STATS -->
+
+                        <div class="hero-stats">
+
+                            <div class="hero-stat">
+
+                                <strong>
+                                    10+
+                                </strong>
+
+                                <span>
+                                    Projects
+                                </span>
+
+                            </div>
+
+
+                            <div class="hero-stat">
+
+                                <strong>
+                                    100%
+                                </strong>
+
+                                <span>
+                                    Responsive
+                                </span>
+
+                            </div>
+
+
+                            <div class="hero-stat">
+
+                                <strong>
+                                    24/7
+                                </strong>
+
+                                <span>
+                                    Creativity
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HERO SIDE CARD -->
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-top">
+
+                            <span>
+                                SY
+                            </span>
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+
+                        <div class="hero-card-content">
+
+                            <span class="card-label">
+                                CURRENT FOCUS
+                            </span>
+
+                            <h3>
+                                Modern Web
+                                Development
+                            </h3>
+
+                            <p>
+                                Creating clean,
+                                responsive and
+                                conversion-focused
+                                digital experiences.
+                            </p>
+
+                        </div>
+
+
+                        <div class="hero-card-footer">
+
+                            <span>
+                                HTML
+                            </span>
+
+                            <span>
+                                CSS
+                            </span>
+
+                            <span>
+                                JS
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ABOUT
+            ================================================== -->
+            <!-- =========================================
+     FOUNDER ABOUT SECTION
+========================================= -->
+
+<section class="founder-section" id="about">
+
+    <div class="founder-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="founder-content">
+
+            <span class="founder-label">
+                <i class="fa-solid fa-user-tie"></i>
+                ABOUT FOUNDER
+            </span>
+
+            <h2>
+                Founder of
+                <span>SY Digital Studio</span>
+            </h2>
+
+            <div class="founder-line"></div>
+
+            <p class="founder-intro">
+                Hi, I'm <strong>Sherdil Yousafzai</strong> —
+                a passionate Frontend Web Developer and the
+                Founder of SY Digital Studio. I create modern,
+                responsive and user-focused web experiences.
+            </p>
+
+
+            <!-- SKILL POINTS -->
+
+            <div class="founder-features">
+
+                <div class="founder-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div>
+                        <h3>Frontend Web Developer</h3>
+                        <p>
+                            Building clean, modern and responsive websites.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="founder-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+
+                    <div>
+                        <h3>Responsive & Mobile First</h3>
+                        <p>
+                            Layouts designed for every screen size.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="founder-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+
+                    <div>
+                        <h3>Performance Focused</h3>
+                        <p>
+                            Lightweight and optimized frontend code.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="founder-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div>
+                        <h3>Clean & Scalable Code</h3>
+                        <p>
+                            Well-structured and easy-to-maintain code.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIGNATURE -->
+
+            <div class="founder-signature">
+                Sherdil Yousafzai
+            </div>
+
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="founder-socials">
+
+                <a href="#" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:hello@sydigitalstudio.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT FOUNDER CARD -->
+
+        <div class="founder-card">
+
+            <div class="founder-card-glow"></div>
+
+            <div class="founder-card-inner">
+
+
+                <!-- GOLD CORNERS -->
+
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="corner corner-bl"></span>
+                <span class="corner corner-br"></span>
+
+
+                <!-- SY LOGO -->
+
+                <div class="founder-card-logo">
+                    SY
+                </div>
+
+
+                <!-- FOUNDER IMAGE -->
+
+                <div class="founder-image-wrapper">
+
+                    <img src="./img.sydigitals/img.png1.png" alt="Sherdil Yousafzai - Founder of SY Digital Studio"loading="lazy">
+
+                </div>
+
+                <!-- CARD BOTTOM -->
+
+                <div class="founder-card-info">
+
+                    <div>
+
+                        <h3>
+                            SHERDIL YOUSAFZAI
+                        </h3>
+
+                        <p>
+                            FOUNDER & FRONTEND WEB DEVELOPER
+                        </p>
+
+                    </div>
+
+                    <div class="founder-card-mark">
+                        SY
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- STATS -->
+
+    <div class="founder-stats">
+
+        <div class="founder-stat">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <div>
+                <strong>10+</strong>
+                <span>Projects Completed</span>
+            </div>
+
+        </div>
+
+
+        <div class="founder-stat">
+
+            <i class="fa-solid fa-code"></i>
+
+            <div>
+                <strong>2+</strong>
+                <span>Years Experience</span>
+            </div>
+
+        </div>
+
+
+        <div class="founder-stat">
+
+            <i class="fa-solid fa-display"></i>
+
+            <div>
+                <strong>100%</strong>
+                <span>Responsive Design</span>
+            </div>
+
+        </div>
+
+
+        <div class="founder-stat">
+
+            <i class="fa-solid fa-users"></i>
+
+            <div>
+                <strong>100%</strong>
+                <span>Client Satisfaction</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+            
+
+
+
+            <!-- =================================================
+                 SKILLS
+            ================================================== -->
+
+            <section class="skills section"
+                id="skills">
+
+                <div class="container">
+
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+                            02 — MY SKILLS
+                        </span>
+
+                        <h2>
+                            Tools Behind
+                            <span>The Work</span>
+                        </h2>
+
+                        <p>
+                            Technologies and areas I use
+                            to build modern websites.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skills-grid">
+
+
+                        <!-- HTML -->
+
+                        <div class="skill-card">
+
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+
+                            <h3>
+                                HTML5
+                            </h3>
+
+                            <p>
+                                Semantic and SEO-friendly
+                                website structure.
+                            </p>
+
+                            <span class="skill-tag">
+                                Frontend
+                            </span>
+
+                        </div>
+
+
+                        <!-- CSS -->
+
+                        <div class="skill-card">
+
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+
+                            <h3>
+                                CSS3
+                            </h3>
+
+                            <p>
+                                Modern layouts, animations,
+                                grids and responsive design.
+                            </p>
+
+                            <span class="skill-tag">
+                                Frontend
+                            </span>
+
+                        </div>
+
+
+                        <!-- JAVASCRIPT -->
+
+                        <div class="skill-card">
+
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+
+                            <h3>
+                                JavaScript
+                            </h3>
+
+                            <p>
+                                Interactive components and
+                                dynamic website functionality.
+                            </p>
+
+                            <span class="skill-tag">
+                                Programming
+                            </span>
+
+                        </div>
+
+
+                        <!-- FRONTEND -->
+
+                        <div class="skill-card">
+
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <h3>
+                                Frontend
+                            </h3>
+
+                            <p>
+                                Professional interfaces
+                                focused on user experience.
+                            </p>
+
+                            <span class="skill-tag">
+                                Development
+                            </span>
+
+                        </div>
+
+
+                        <!-- BACKEND -->
+
+                        <div class="skill-card">
+
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+
+                            <h3>
+                                Backend
+                            </h3>
+
+                            <p>
+                                Backend-ready structures
+                                and web application concepts.
+                            </p>
+
+                            <span class="skill-tag">
+                                Development
+                            </span>
+
+                        </div>
+
+
+                        <!-- SEO -->
+
+                        <div class="skill-card">
+
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </div>
+
+                            <h3>
+                                SEO
+                            </h3>
+
+                            <p>
+                                Semantic structure and
+                                search-friendly website setup.
+                            </p>
+
+                            <span class="skill-tag">
+                                Optimization
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MY PROJECTS
+            ================================================== -->
+
+            <section class="projects section"
+                id="projects">
+
+                <div class="container">
+
+
+                    <div class="section-heading projects-heading">
+
+                        <div>
+
+                            <span class="section-label">
+                                03 — MY PROJECTS
+                            </span>
+
+                            <h2>
+                                Selected
+                                <span>Projects</span>
+                            </h2>
+
+                        </div>
+
+
+                        <p>
+                            A collection of websites,
+                            interfaces and digital
+                            experiences created by
+                            SY Digital Studio.
+                        </p>
+
+                    </div>
+
+
+                    <!-- PROJECT FILTERS -->
+
+                    <div class="project-filters">
+
+                        <button
+                            class="filter-btn active"
+                            data-filter="all">
+
+                            All
+
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="frontend">
+
+                            Frontend
+
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="business">
+
+                            Business
+
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="landing">
+
+                            Landing Page
+
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="other">
+
+                            Other
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- PROJECT CARDS -->
+
+                    <div class="projects-grid">
+
+
+                        <!-- PROJECT 01 -->
+
+                        <article
+                            class="project-card"
+                            data-category="frontend">
+
+
+                            <div class="project-number">
+                                01
+                            </div>
+
+                            <div class="project-preview project-preview-one">
+
+                               <span>Frontend</span>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-category">
+                                    FRONTEND
+                                </span>
+
+                                <h3>
+                                    Project One
+                                </h3>
+
+                                <p>
+                                    Add your project
+                                    description here.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a href="#screenshots">
+                                        View Screenshots
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                    <a href="#"
+                                        target="_blank"
+                                        rel="noopener">
+
+                                        Live Website
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- PROJECT 02 -->
+
+                        <article
+                            class="project-card"
+                            data-category="business">
+
+                            <div class="project-number">
+                                02
+                            </div>
+
+                            <div class="project-preview project-preview-two">
+
+                                <span>
+                                    PROJECT SCREENSHOT
+                                </span>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-category">
+                                    BUSINESS
+                                </span>
+
+                                <h3>
+                                    Project Two
+                                </h3>
+
+                                <p>
+                                    Add your project
+                                    description here.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a href="#screenshots">
+                                        View Screenshots
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                    <a href="#"
+                                        target="_blank"
+                                        rel="noopener">
+
+                                        Live Website
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- PROJECT 03 -->
+
+                        <article
+                            class="project-card"
+                            data-category="landing">
+
+                            <div class="project-number">
+                                03
+                            </div>
+
+                            <div class="project-preview project-preview-three">
+
+                                 <span>
+                                    Landing page
+                                 </span>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-category">
+                                    LANDING PAGE
+                                </span>
+
+                                <h3>
+                                    Project Three
+                                </h3>
+
+                                <p>
+                                    Add your project
+                                    description here.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a href="#screenshots">
+                                        View Screenshots
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                    <a href="#"
+                                        target="_blank"
+                                        rel="noopener">
+
+                                        Live Website
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- PROJECT 04 -->
+
+                        <article
+                            class="project-card"
+                            data-category="frontend">
+
+                            <div class="project-number">
+                                04
+                            </div>
+
+                            <div class="project-preview project-preview-four">
+
+                                <span>
+                                    PROJECT SCREENSHOT
+                                </span>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-category">
+                                    FRONTEND
+                                </span>
+
+                                <h3>
+                                    Project Four
+                                </h3>
+
+                                <p>
+                                    Add your project
+                                    description here.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a href="#screenshots">
+                                        View Screenshots
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                    <a href="#"
+                                        target="_blank"
+                                        rel="noopener">
+
+                                        Live Website
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- PROJECT 05 -->
+
+                        <article
+                            class="project-card"
+                            data-category="business">
+
+                            <div class="project-number">
+                                05
+                            </div>
+
+                            <div class="project-preview project-preview-five">
+
+                                <span>
+                                    PROJECT SCREENSHOT
+                                </span>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-category">
+                                    BUSINESS
+                                </span>
+
+                                <h3>
+                                    Project Five
+                                </h3>
+
+                                <p>
+                                    Add your project
+                                    description here.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a href="#screenshots">
+                                        View Screenshots
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                    <a href="#"
+                                        target="_blank"
+                                        rel="noopener">
+
+                                        Live Website
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- PROJECT 06 -->
+
+                        <article
+                            class="project-card"
+                            data-category="other">
+
+                            <div class="project-number">
+                                06
+                            </div>
+
+                            <div class="project-preview project-preview-six">
+
+                                <span>
+                                    PROJECT SCREENSHOT
+                                </span>
+
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-category">
+                                    OTHER
+                                </span>
+
+                                <h3>
+                                    Project Six
+                                </h3>
+
+                                <p>
+                                    Add your project
+                                    description here.
+                                </p>
+
+                                <div class="project-tech">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JS</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a href="#screenshots">
+                                        View Screenshots
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+
+                                    <a href="#"
+                                        target="_blank"
+                                        rel="noopener">
+
+                                        Live Website
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROJECT SCREENSHOTS
+            ================================================== -->
+
+            <section class="screenshots section"
+                id="screenshots">
+
+                <div class="container">
+
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+                            04 — PROJECT SCREENSHOTS
+                        </span>
+
+                        <h2>
+                            Show Your
+                            <span>Work</span>
+                        </h2>
+
+                        <p>
+                            Add screenshots of your completed
+                            websites here so clients can
+                            quickly understand your work.
+                        </p>
+
+                    </div>
+
+
+                    <div class="screenshots-grid">
+
+
+                        <!-- SCREENSHOT 01 -->
+
+                        <div class="screenshot-card">
+
+                            <div class="screenshot-image">
+
+                                <img
+                                    src="images/screenshots/project-01-desktop.jpg"
+                                    alt="Project 01 desktop website screenshot"
+                                    loading="lazy">
+
+                            </div>
+
+                            <div class="screenshot-info">
+
+                                <span>
+                                    DESKTOP
+                                </span>
+
+                                <h3>
+                                    Project 01
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SCREENSHOT 02 -->
+
+                        <div class="screenshot-card">
+
+                            <div class="screenshot-image">
+
+                                <img
+                                    src="images/screenshots/project-01-tablet.jpg"
+                                    alt="Project 01 tablet website screenshot"
+                                    loading="lazy">
+
+                            </div>
+
+                            <div class="screenshot-info">
+
+                                <span>
+                                    TABLET
+                                </span>
+
+                                <h3>
+                                    Project 01
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SCREENSHOT 03 -->
+
+                        <div class="screenshot-card">
+
+                            <div class="screenshot-image">
+
+                                <img
+                                    src="images/screenshots/project-01-mobile.jpg"
+                                    alt="Project 01 mobile website screenshot"
+                                    loading="lazy">
+
+                            </div>
+
+                            <div class="screenshot-info">
+
+                                <span>
+                                    MOBILE
+                                </span>
+
+                                <h3>
+                                    Project 01
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SCREENSHOT 04 -->
+
+                        <div class="screenshot-card">
+
+                            <div class="screenshot-image">
+
+                                <img
+                                    src="images/screenshots/project-02-desktop.jpg"
+                                    alt="Project 02 desktop website screenshot"
+                                    loading="lazy">
+
+                            </div>
+
+                            <div class="screenshot-info">
+
+                                <span>
+                                    DESKTOP
+                                </span>
+
+                                <h3>
+                                    Project 02
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SCREENSHOT 05 -->
+
+                        <div class="screenshot-card">
+
+                            <div class="screenshot-image">
+
+                                <img
+                                    src="images/screenshots/project-02-tablet.jpg"
+                                    alt="Project 02 tablet website screenshot"
+                                    loading="lazy">
+
+                            </div>
+
+                            <div class="screenshot-info">
+
+                                <span>
+                                    TABLET
+                                </span>
+
+                                <h3>
+                                    Project 02
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SCREENSHOT 06 -->
+
+                        <div class="screenshot-card">
+
+                            <div class="screenshot-image">
+
+                                <img
+                                    src="images/screenshots/project-02-mobile.jpg"
+                                    alt="Project 02 mobile website screenshot"
+                                    loading="lazy">
+
+                            </div>
+
+                            <div class="screenshot-info">
+
+                                <span>
+                                    MOBILE
+                                </span>
+
+                                <h3>
+                                    Project 02
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 LIVE WEBSITE SHOWCASE
+            ================================================== -->
+
+            <section class="live-websites section"
+                id="live-websites">
+
+                <div class="container">
+
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+                            05 — LIVE WEBSITES
+                        </span>
+
+                        <h2>
+                            Explore My
+                            <span>Live Work</span>
+                        </h2>
+
+                        <p>
+                            Direct links to websites that
+                            are currently available online.
+                        </p>
+
+                    </div>
+
+
+                    <div class="live-grid">
+
+
+                        <!-- LIVE PROJECT -->
+
+                        <div class="live-card">
+
+                            <div class="live-icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+
+                            <div class="live-content">
+
+                                <span>
+                                    LIVE PROJECT 01
+                                </span>
+
+                                <h3>
+                                    S|Y Collection
+                                </h3>
+
+                                <p>
+                                    Short description of
+                                    your live website.
+                                </p>
+
+                            </div>
+
+                            <a href="https://sherdilejaz2009-beep.github.io/sherdily/"
+                                target="_blank"
+                                rel="noopener"
+                                class="live-link">
+
+                                Visit Website
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- LIVE PROJECT -->
+
+                        <div class="live-card">
+
+                            <div class="live-icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+
+                            <div class="live-content">
+
+                                <span>
+                                    LIVE PROJECT 02
+                                </span>
+
+                                <h3>
+                                    Website Name
+                                </h3>
+
+                                <p>
+                                    Short description of
+                                    your live website.
+                                </p>
+
+                            </div>
+
+                            <a href="#"
+                                target="_blank"
+                                rel="noopener"
+                                class="live-link">
+
+                                Visit Website
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESPONSIVE DESIGN
+            ================================================== -->
+
+            <section class="responsive section"
+                id="responsive">
+
+                <div class="container">
+
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+                            06 — RESPONSIVE DESIGN
+                        </span>
+
+                        <h2>
+                            One Website.
+                            <span>Every Screen.</span>
+                        </h2>
+
+                        <p>
+                            Every project is built with
+                            responsive layouts in mind.
+                        </p>
+
+                    </div>
+
+
+                    <div class="responsive-grid">
+
+
+                        <div class="responsive-card">
+
+                            <div class="device-icon">
+
+                                <i class="fa-solid fa-desktop"></i>
+
+                            </div>
+
+                            <h3>
+                                Desktop
+                            </h3>
+
+                            <p>
+                                Large-screen layouts with
+                                balanced spacing and
+                                premium visual hierarchy.
+                            </p>
+
+                        </div>
+
+
+                        <div class="responsive-card">
+
+                            <div class="device-icon">
+
+                                <i class="fa-solid fa-laptop"></i>
+
+                            </div>
+
+                            <h3>
+                                Laptop
+                            </h3>
+
+                            <p>
+                                Flexible layouts optimized
+                                for common laptop screens.
+                            </p>
+
+                        </div>
+
+
+                        <div class="responsive-card">
+
+                            <div class="device-icon">
+
+                                <i class="fa-solid fa-tablet-screen-button"></i>
+
+                            </div>
+
+                            <h3>
+                                Tablet
+                            </h3>
+
+                            <p>
+                                Carefully adjusted grids,
+                                typography and navigation.
+                            </p>
+
+                        </div>
+
+
+                        <div class="responsive-card">
+
+                            <div class="device-icon">
+
+                                <i class="fa-solid fa-mobile-screen"></i>
+
+                            </div>
+
+                            <h3>
+                                Mobile
+                            </h3>
+
+                            <p>
+                                Mobile-friendly navigation
+                                and layouts without breaking.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONTACT
+            ================================================== -->
+
+            <section class="contact section"
+                id="contact">
+
+                <div class="container">
+
+
+                    <div class="contact-wrapper">
+
+
+                        <!-- CONTACT INFO -->
+
+                        <div class="contact-info">
+
+                            <span class="section-label">
+                                07 — CONTACT
+                            </span>
+
+                            <h2>
+                                Have A Project
+                                <span>In Mind?</span>
+                            </h2>
+
+                            <p>
+                                Let's turn your idea into
+                                a premium digital experience.
+                            </p>
+
+
+                            <div class="contact-details">
+
+
+                                <div class="contact-item">
+
+                                    <div class="contact-icon">
+
+                                        <i class="fa-solid fa-envelope"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            EMAIL
+                                        </span>
+
+                                        <a href="mailto:hello@sydigitalstudio.com">
+                                            hello@sydigitalstudio.com
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="contact-item">
+
+                                    <div class="contact-icon">
+
+                                        <i class="fa-solid fa-location-dot"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            LOCATION
+                                        </span>
+
+                                        <p>
+                                            Pakistan
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!-- SOCIAL LINKS -->
+
+                            <div class="social-links">
+
+                                <a href="#"
+                                    aria-label="Instagram">
+
+                                    <i class="fa-brands fa-instagram"></i>
+
+                                </a>
+
+                                <a href="#"
+                                    aria-label="GitHub">
+
+                                    <i class="fa-brands fa-github"></i>
+
+                                </a>
+
+                                <a href="#"
+                                    aria-label="LinkedIn">
+
+                                    <i class="fa-brands fa-linkedin-in"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONTACT FORM -->
+
+                        <div class="contact-form-box">
+
+                            <form id="contactForm">
+
+
+                                <div class="input-row">
+
+
+                                    <div class="form-group">
+
+                                        <label for="name">
+                                            Name
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            placeholder="Your name"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="email">
+                                            Email
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            placeholder="Your email"
+                                            required>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="subject">
+                                        Subject
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        placeholder="Project subject"
+                                        required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="message">
+                                        Message
+                                    </label>
+
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows="6"
+                                        placeholder="Tell me about your project..."
+                                        required></textarea>
+
+                                </div>
+
+
+                                <button
+                                    type="submit"
+                                    class="gold-btn">
+
+                                    Send Message
+
+                                    <i class="fa-solid fa-paper-plane"></i>
+
+                                </button>
+
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+            <div class="container">
+
+
+                <div class="footer-top">
+
+
+                    <!-- FOOTER BRAND -->
+
+                    <div class="footer-brand">
+
+                        <a href="#home"
+                            class="footer-logo">
+
+                            <span class="logo-mark">
+                                SY
+                            </span>
+
+                            <span>
+                                Digital Studio
+                            </span>
+
+                        </a>
+
+                        <p>
+                            Premium websites and digital
+                            experiences crafted with
+                            clean code and creative thinking.
+                        </p>
+
+                    </div>
+
+
+                    <!-- FOOTER NAVIGATION -->
+
+                    <div class="footer-column">
+
+                        <h3>
+                            Navigation
+                        </h3>
+
+                        <a href="#home">
+                            Home
+                        </a>
+
+                        <a href="#about">
+                            About
+                        </a>
+
+                        <a href="#skills">
+                            Skills
+                        </a>
+
+                        <a href="#projects">
+                            Projects
+                        </a>
+
+                    </div>
+
+
+                    <!-- FOOTER SERVICES -->
+
+                    <div class="footer-column">
+
+                        <h3>
+                            Services
+                        </h3>
+
+                        <a href="#projects">
+                            Web Development
+                        </a>
+
+                        <a href="#projects">
+                            Frontend Development
+                        </a>
+
+                        <a href="#responsive">
+                            Responsive Design
+                        </a>
+
+                        <a href="#contact">
+                            Website Consultation
+                        </a>
+
+                    </div>
+
+
+                    <!-- FOOTER CONTACT -->
+
+                    <div class="footer-column">
+
+                        <h3>
+                            Connect
+                        </h3>
+
+                        <a href="#contact">
+                            Contact Me
+                        </a>
+
+                        <a href="#">
+                            GitHub
+                        </a>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="footer-bottom">
+
+                    <p>
+                        © 2026 SY Digital Studio.
+                        All Rights Reserved.
+                    </p>
+
+                    <a href="#home">
+                        Back To Top
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+    /* ===============================
+       LOADER
+    =============================== */
+
+    const loader = document.getElementById("loader");
+    const loaderPercent = document.getElementById("loaderPercent");
+    const accessScreen = document.getElementById("accessScreen");
+    const accessForm = document.getElementById("accessForm");
+    const mainWebsite = document.getElementById("mainWebsite");
+
+    let progress = 0;
+
+    const loaderInterval = setInterval(function () {
+
+        progress += 5;
+
+        if (loaderPercent) {
+            loaderPercent.textContent = progress + "%";
+        }
+
+        if (progress >= 100) {
+
+            clearInterval(loaderInterval);
+
+            setTimeout(function () {
+
+                if (loader) {
+                    loader.classList.add("hide");
+                }
+
+                setTimeout(function () {
+
+                    if (accessScreen) {
+                        accessScreen.classList.add("show");
+                    }
+
+                }, 500);
+
+            }, 300);
+        }
+
+    }, 100);
+
+
+    /* ===============================
+       ACCESS FORM
+    =============================== */
+
+    if (accessForm) {
+
+        accessForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            if (accessScreen) {
+                accessScreen.classList.remove("show");
+                accessScreen.classList.add("hide");
+            }
+
+            setTimeout(function () {
+
+                if (mainWebsite) {
+                    mainWebsite.classList.add("show");
+                }
+
+            }, 500);
+
+        });
+
+    }
+
+
+    /* ===============================
+       MOBILE MENU
+    =============================== */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navbar = document.getElementById("navbar");
+
+    if (menuToggle && navbar) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navbar.classList.toggle("open");
+
+            const icon = menuToggle.querySelector("i");
+
+            if (navbar.classList.contains("open")) {
+
+                if (icon) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-xmark");
+                }
+
+            } else {
+
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* ===============================
+       MOBILE NAV LINKS
+    =============================== */
+
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            if (navbar) {
+                navbar.classList.remove("open");
+            }
+
+            if (menuToggle) {
+
+                const icon = menuToggle.querySelector("i");
+
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+
+            }
+
+        });
+
+    });
+
+
+    /* ===============================
+       PROJECT FILTER
+    =============================== */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+    const projectCards =
+        document.querySelectorAll(".project-card");
+
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            filterButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            const filter =
+                button.getAttribute("data-filter");
+
+
+            projectCards.forEach(function (card) {
+
+                const category =
+                    card.getAttribute("data-category");
+
+
+                if (
+                    filter === "all" ||
+                    category === filter
+                ) {
+
+                    card.classList.remove("hidden");
+
+                } else {
+
+                    card.classList.add("hidden");
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+    /* ===============================
+       CONTACT FORM
+    =============================== */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+
+    if (contactForm) {
+
+        contactForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            alert(
+                "Thank you! Your message has been received."
+            );
+
+            contactForm.reset();
+
+        });
+
+    }
+
+});
+    </script>
+
+</body>
+
+</html>
+
